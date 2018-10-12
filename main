@@ -3,22 +3,6 @@
 #PBS -N crop_reorient
 #PBS -V
 
-if [ $ENV == "IUHPC" ]; then
-   module load fsl
-fi
-
-rm -f t1.nii.gz
-
-export input_t1=$(jq -r .t1 config.json)
-
-cp $input_t1 .
-
-if [ $(jq -r .reorient config.json) == true ]; then
-	fslreorient2std t1.nii.gz t1.nii.gz
-fi
-
-if [ $(jq -r .crop config.json) == true ]; then
-	robustfov -i t1.nii.gz -r t1.nii.gz
-fi
+time singularity exec -e docker://brainlife/fsl:5.0.9 ./run.sh
 
 
