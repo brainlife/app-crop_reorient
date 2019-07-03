@@ -1,3 +1,5 @@
 {
-"input": "testdata/t1.nii.gz"
+"input": "/home/hayashis/Downloads/t2.nii.gz",
+"reorient": true,
+"crop": true
 }
