@@ -5,6 +5,7 @@ rm -f out.nii.gz
 input=$(jq -r .input config.json)
 
 cp $input out.nii.gz
+chmod +w out.nii.gz
 
 if [ $(jq -r .reorient config.json) == true ]; then
 	fslreorient2std out.nii.gz out.nii.gz
