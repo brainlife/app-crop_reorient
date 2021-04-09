@@ -17,5 +17,8 @@ else
     ln -sf tmp1.nii.gz tmp2.nii.gz
 fi
 
+#copy all other files - like sbred,events,bvec,bval,etc..
 mkdir -p out
+cp -r $(dirname $input)/* out/
+
 ln -sf ../tmp2.nii.gz out/$(basename $input)
