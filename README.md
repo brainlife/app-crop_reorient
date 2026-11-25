@@ -1,4 +1,30 @@
 # app-crop_reorient
+
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Reorients a FLAIR image to the standard (MNI152) orientation with FSL fslreorient2std and crops the lower head and neck with robustfov.**
+
+Runs fslreorient2std and then robustfov on the input FLAIR image; either step can be switched off. Use it early in anatomical preprocessing so later steps see a standard-oriented, tightly cropped head. It only reorients and crops; it does not register the image to a template.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.704](https://doi.org/10.25663/brainlife.app.704)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `input` | `neuro/anat/flair` | yes | FLAIR image. |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `out` | `neuro/anat/flair` | The reoriented and/or cropped FLAIR image. |
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| `reorient` | boolean | `true` | Run fslreorient2std. This command reorients an image to match the orientation of the standard template images (MNI152) so that they appear "the same way around" in FSLView. It requires that the image labels are correct in FSLView before this is run. It is also not a registration tool, so it will not align the image to standard space, it will only apply 90, 180 or 270 degree rotations about the different axes as necessary to get the labels in the same position as the standard template. |
+| `crop` | boolean | `true` | Run robustfov to reduce field-of-view of image to remove lower head and neck. |
+
+Runtime: container `brainlife/fsl:6.0.4-patched2`; 1 CPUs; 8 GB memory; 2 h walltime.
+
+<!-- brainlife-app:end -->
+
 This application will crop and reorient the nifti image to standard orientation and FOV.
 
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
