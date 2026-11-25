@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-> 📍 **This branch, `2.0`, runs 4 brainlife.io Apps** that share the same code:
+> **This branch, `2.0`, runs 4 brainlife.io Apps** that share the same code:
 >
 > - FSL Reorient and Crop FLAIR ([doi:10.25663/brainlife.app.704](https://doi.org/10.25663/brainlife.app.704))
 > - FSL Reorient - Task ([doi:10.25663/brainlife.app.502](https://doi.org/10.25663/brainlife.app.502))
@@ -19,11 +19,11 @@
 >
 > The other Apps in this repository are listed under **Versions on brainlife.io** below.
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
-### 🧩 FSL Reorient and Crop FLAIR
+### FSL Reorient and Crop FLAIR
 
 > **Reorients a FLAIR image to the standard (MNI152) orientation with FSL fslreorient2std and crops the lower head and neck with robustfov.**
 
@@ -31,26 +31,26 @@ Runs fslreorient2std and then robustfov on the input FLAIR image; either step ca
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/anat/flair` |
-| 📤 **Outputs** | `neuro/anat/flair` |
-| 🐳 **Container** | `brainlife/fsl:6.0.4-patched2` |
-| ⚙️ **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.704](https://doi.org/10.25663/brainlife.app.704) |
+| **Inputs** | `neuro/anat/flair` |
+| **Outputs** | `neuro/anat/flair` |
+| **Container** | `brainlife/fsl:6.0.4-patched2` |
+| **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.704](https://doi.org/10.25663/brainlife.app.704) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `input` | `neuro/anat/flair` | yes | FLAIR image. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `out` | `neuro/anat/flair` | The reoriented and/or cropped FLAIR image. |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -59,7 +59,7 @@ Runs fslreorient2std and then robustfov on the input FLAIR image; either step ca
 
 </details>
 
-### 🧩 FSL Reorient - Task
+### FSL Reorient - Task
 
 > **Reorients a task fMRI series to the standard (MNI152) orientation with FSL fslreorient2std, passing events, sbref and physio files through.**
 
@@ -67,26 +67,26 @@ Runs fslreorient2std on the BOLD image and copies every other file of the input 
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/func/task` |
-| 📤 **Outputs** | `neuro/func/task` |
-| 🐳 **Container** | `brainlife/fsl:6.0.4-patched2` |
-| ⚙️ **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.502](https://doi.org/10.25663/brainlife.app.502) |
+| **Inputs** | `neuro/func/task` |
+| **Outputs** | `neuro/func/task` |
+| **Container** | `brainlife/fsl:6.0.4-patched2` |
+| **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.502](https://doi.org/10.25663/brainlife.app.502) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `input` | `neuro/func/task` | yes | Task fMRI datatype: BOLD series plus optional events, sbref and physio files with JSON sidecars. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `out` | `neuro/func/task` | The task fMRI datatype with the reoriented BOLD image and the other files copied unchanged. |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -95,7 +95,7 @@ Runs fslreorient2std on the BOLD image and copies every other file of the input 
 
 </details>
 
-### 🧩 FSL Reorient and Crop T2
+### FSL Reorient and Crop T2
 
 > **Reorients a T2-weighted image to the standard (MNI152) orientation with FSL fslreorient2std and crops the lower head and neck with robustfov.**
 
@@ -103,26 +103,26 @@ Runs fslreorient2std and then robustfov on the input T2-weighted image; either s
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/anat/t2w` |
-| 📤 **Outputs** | `neuro/anat/t2w` |
-| 🐳 **Container** | `brainlife/fsl:6.0.4-patched2` |
-| ⚙️ **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.501](https://doi.org/10.25663/brainlife.app.501) |
+| **Inputs** | `neuro/anat/t2w` |
+| **Outputs** | `neuro/anat/t2w` |
+| **Container** | `brainlife/fsl:6.0.4-patched2` |
+| **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.501](https://doi.org/10.25663/brainlife.app.501) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `input` | `neuro/anat/t2w` | yes | T2-weighted image. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `out` | `neuro/anat/t2w` | The reoriented and/or cropped T2-weighted image. |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -131,7 +131,7 @@ Runs fslreorient2std and then robustfov on the input T2-weighted image; either s
 
 </details>
 
-### 🧩 FSL Reorient and Crop T1
+### FSL Reorient and Crop T1
 
 > **Reorients a T1-weighted image to the standard (MNI152) orientation with FSL fslreorient2std and crops the lower head and neck with robustfov.**
 
@@ -139,26 +139,26 @@ Runs fslreorient2std and then robustfov on the input T1-weighted image; either s
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/anat/t1w` |
-| 📤 **Outputs** | `neuro/anat/t1w` |
-| 🐳 **Container** | `brainlife/fsl:6.0.4-patched2` |
-| ⚙️ **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.500](https://doi.org/10.25663/brainlife.app.500) |
+| **Inputs** | `neuro/anat/t1w` |
+| **Outputs** | `neuro/anat/t1w` |
+| **Container** | `brainlife/fsl:6.0.4-patched2` |
+| **Resources** | 1 CPUs · 8 GB memory · 2 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.500](https://doi.org/10.25663/brainlife.app.500) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `input` | `neuro/anat/t1w` | yes | T1-weighted image. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `out` | `neuro/anat/t1w` | The reoriented and/or cropped T1-weighted image. |
 
 <details>
-<summary><b>⚙️ Parameters</b> (2)</summary>
+<summary><b>Parameters</b> (2)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -169,7 +169,7 @@ Runs fslreorient2std and then robustfov on the input T1-weighted image; either s
 
 <!-- brainlife-app:end -->
 
-## 🏷️ Versions on brainlife.io
+## Versions on brainlife.io
 
 This repository hosts one App per input datatype; each is registered on brainlife.io from a branch of this repository.
 
@@ -182,9 +182,9 @@ This repository hosts one App per input datatype; each is registered on brainlif
 | Crop and Reorient T1 | `neuro/anat/t1w` | 5.0.9 | [`1.0`](https://github.com/brainlife/app-crop_reorient/tree/1.0) | [doi:10.25663/bl.app.15](https://doi.org/10.25663/bl.app.15) | deprecated |
 | Crop and Reorient T2 | `neuro/anat/t2w` | 5.0.9 | [`1.0`](https://github.com/brainlife/app-crop_reorient/tree/1.0) | [doi:10.25663/brainlife.app.114](https://doi.org/10.25663/brainlife.app.114) | deprecated |
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App for your datatype from the table above, choose the image from your project and press **Execute**. The App:
 
@@ -195,7 +195,7 @@ Either step can be switched off. The output has the same datatype as the input, 
 
 For task fMRI, only the BOLD image is reoriented; events, sbref and physio files and their JSON sidecars are copied through unchanged. Cropping is meant for anatomical images; leave `crop` off for fMRI.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqlang.github.io/jq/). FSL runs inside the container.
 
@@ -216,7 +216,7 @@ You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqla
    ./main
    ```
 
-### 🧪 Sample data
+### Sample data
 
 Download sample datasets from brainlife.io with the [brainlife CLI](https://github.com/brainlife/cli):
 
@@ -226,7 +226,7 @@ bl login
 bl dataset download <dataset-id>
 ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 out/
@@ -234,7 +234,7 @@ out/
 └── …                     every other file in the input directory (sidecars, events, sbref, physio), unchanged
 ```
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -247,13 +247,13 @@ out/
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. *Scientific Data* 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-## 👥 Authors
+## Authors
 
 - Lindsey Kitchell
 
 **Contributors:** Soichi Hayashi, Brad Caron, Franco Pestilli
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -272,6 +272,6 @@ out/
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](LICENSE). FSL itself is distributed under its own [license](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Licence).
